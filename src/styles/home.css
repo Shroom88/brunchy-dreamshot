@@ -1,0 +1,29 @@
+h1 {
+  width: 450px;
+  position: flex;
+  text-align: left;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 65px;
+  color: #363636;
+}
+
+h1 > span {
+  color: #f17c0f;
+}
+
+p {
+  width: 480px;
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+  }
+}
