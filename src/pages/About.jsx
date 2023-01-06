@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function About() {
+  const year = new Date().getFullYear();
   return (
     <div>
-      About
+      <p>Copyright &copy; {year} Gabriel Stanev for DreamShot</p>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
