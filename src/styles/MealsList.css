@@ -1,0 +1,27 @@
+.wrapper {
+  width: 100%;
+  padding-top: 25px;
+  position: relative;
+  top: 70px;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+
+/* scrollbar css */
+.wrapper::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+  background: #bebebe;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

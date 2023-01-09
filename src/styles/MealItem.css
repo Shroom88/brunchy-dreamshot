@@ -1,0 +1,48 @@
+.card {
+  width: 230px;
+  height: 270px;
+}
+
+.meal-img {
+  width: 192px;
+  height: 120px;
+  position: relative;
+  bottom: 25px;
+  left: 60px;
+}
+
+.desc {
+  position: relative;
+  bottom: 5px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.sub-desc {
+  margin: 0;
+  color: #797979;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 45px;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cart {
+  float: right;
+  padding: 0 15px 0 15px;
+  width: 20px;
+  height: 20px;
+}
