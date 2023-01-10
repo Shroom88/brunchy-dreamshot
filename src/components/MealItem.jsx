@@ -2,19 +2,25 @@ import React from "react";
 import "../styles/MealItem.css";
 import Pancakes from "../assets/pancakes.png";
 import { FaShoppingBasket } from "react-icons/fa";
+import MealsContext from "../context/MealsContext";
+import { useContext } from "react";
 
-function MealItem() {
+function MealItem({ name, caption, price }) {
+  const { setSum } = useContext(MealsContext);
+  const handleSum = (p) => {
+    setSum(p);
+  };
   return (
     <div className="card">
       <img src={Pancakes} alt="food img" className="meal-img" />
       <div className="desc">
-        <h3>Butter Pancakes</h3>
-        <p className="sub-desc">With honey</p>
+        <h3>{name}</h3>
+        <p className="sub-desc">{caption}</p>
         <div className="price">
-          <span>$</span> 14.50
+          <span>$</span> {price}
         </div>
       </div>
-      <FaShoppingBasket className="cart" />
+      <FaShoppingBasket className="cart" onClick={handleSum(price)} />
     </div>
   );
 }

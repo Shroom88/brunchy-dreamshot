@@ -1,13 +1,10 @@
 import React from "react";
 import "../styles/Button.css";
 
-function Button({ children }) {
-  const handleClick = () => {
-    alert("button do be workin");
-  };
+function Button({ children }, onClick) {
   return (
     <div>
-      <button className="btn" onClick={handleClick}>
+      <button className="btn" onClick={onClick}>
         {children}
       </button>
     </div>
