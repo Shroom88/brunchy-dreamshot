@@ -6,7 +6,7 @@ import MealsContext from "../context/MealsContext";
 import { useContext } from "react";
 
 function MealsList() {
-  const { data } = useContext(MealsContext);
+  const { data, order } = useContext(MealsContext);
 
   return (
     <div className="wrapper">
@@ -16,6 +16,7 @@ function MealsList() {
           name={meal.name}
           caption={meal.caption}
           price={meal.price}
+          image={meal.image}
         />
       ))}
     </div>
