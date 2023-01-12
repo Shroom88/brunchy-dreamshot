@@ -3,24 +3,36 @@ import "../styles/Basket.css";
 import { FaShoppingBasket } from "react-icons/fa";
 import { useContext } from "react";
 import MealsContext from "../context/MealsContext";
+import BasketReview from "./BasketReview";
+import Success from "./Success";
 import "../styles/Button.css";
 
 function Basket() {
-  const { sum, data } = useContext(MealsContext);
+  const { sum, setReviewFlag, reviewFlag, setSuccessFlag, successFlag } =
+    useContext(MealsContext);
 
   const handleClick = () => {
-    console.log(sum);
-    alert(sum);
+    if (sum !== "0.00") {
+      setSuccessFlag(true);
+    }
+  };
+
+  const handleBasket = () => {
+    setReviewFlag(true);
   };
 
   return (
-    <div className="summary">
-      <FaShoppingBasket className="icon" />
-      <h3>{sum}$</h3>
-      <button className="btn" onClick={handleClick}>
-        Order Now
-      </button>
-    </div>
+    <>
+      {reviewFlag && <BasketReview />}
+      {successFlag && <Success />}
+      <div className="summary">
+        <FaShoppingBasket className="icon" onClick={handleBasket} />
+        <h3>{sum}$</h3>
+        <button className="btn" onClick={handleClick}>
+          Order Now
+        </button>
+      </div>
+    </>
   );
 }
 

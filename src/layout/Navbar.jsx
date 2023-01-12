@@ -11,9 +11,9 @@ function Navbar() {
       </Link>
       <div className="links-container">
         <div className="links">
-          <Link to="/about" className="link">
+          <a href="https://www.dreamshot.bg/#whoweare" className="link">
             About
-          </Link>
+          </a>
           <Link to="/callus" className="link">
             Call Us
           </Link>

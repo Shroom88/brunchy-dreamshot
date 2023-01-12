@@ -7,6 +7,8 @@ const MealsContext = createContext();
 export const MealsProvider = ({ children }) => {
   const [order, setOrder] = useState([]);
   const [sum, setSum] = useState(0);
+  const [reviewFlag, setReviewFlag] = useState(false);
+  const [successFlag, setSuccessFlag] = useState(false);
 
   const addSum = (price) => {
     setSum(sum + price);
@@ -14,7 +16,7 @@ export const MealsProvider = ({ children }) => {
 
   const addOrder = (name) => {
     const meal = data.items.filter((n) => n.name === name);
-    const newOrder = [...order, meal];
+    const newOrder = order.concat(meal);
     setOrder(newOrder);
   };
 
@@ -23,9 +25,15 @@ export const MealsProvider = ({ children }) => {
       value={{
         data: data.items,
         order,
-        addOrder,
+        reviewFlag,
         sum: sum.toFixed(2),
+        successFlag,
+        setSuccessFlag,
+        setReviewFlag,
+        addOrder,
         addSum,
+        setSum,
+        setOrder,
       }}
     >
       {children}

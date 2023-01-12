@@ -21,7 +21,6 @@ function MealItem({ name, caption, price, image }) {
   const setImage = (image) => {
     switch (image) {
       case "1.png":
-        console.log(Pancakes);
         return Pancakes;
       case "2.png":
         return AvocadoToast;
