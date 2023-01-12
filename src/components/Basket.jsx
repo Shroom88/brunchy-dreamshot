@@ -14,6 +14,8 @@ function Basket() {
   const handleClick = () => {
     if (sum !== "0.00") {
       setSuccessFlag(true);
+    } else {
+      alert("Please, select a meal first.");
     }
   };
 
