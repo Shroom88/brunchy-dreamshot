@@ -11,7 +11,11 @@ function Navbar() {
       </Link>
       <div className="links-container">
         <div className="links">
-          <a href="https://www.dreamshot.bg/#whoweare" className="link">
+          <a
+            href="https://www.dreamshot.bg/#whoweare"
+            target="_blank"
+            className="link"
+          >
             About
           </a>
           <Link to="/callus" className="link">
